@@ -16,15 +16,10 @@ public void setup()
 }
 public boolean palindrome(String word)
 {
-  return (sNew.equals(word); 
+  word = word.toLowerCase().replaceAll("\\p{P}", "").replaceAll("\\s","");
+  for (int i = 0; i < word.length() / 2; i++)
+    if (word.charAt(i) != word.charAt(word.length() - 1 - i))
+      return false;
+    return true;
 }
-public String reverse(String str)
-{
-    String sNew = new String();
-    
-  for (int i = word.length()-1; i >= 0; i--)
-    sNew = sNew + word.charAt(i);
-    return sNew;
-}
-
 
